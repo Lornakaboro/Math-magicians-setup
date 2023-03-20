@@ -89,13 +89,21 @@ Clone this repository to your desired folder:
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Author1**
+👤 **Lornakaboro**
 
 - GitHub:  [@githubhandle](https://github.com/Lornakaboro)
 - Twitter: [@twitterhandle](https://twitter.com/KaboroLorna)
 - Linkedin [@linkedinprofile](https://www.linkedin.com/in/lorna-kaboro-23620b242/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ]  Calculator App
+- [ ] more interactive web page
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
