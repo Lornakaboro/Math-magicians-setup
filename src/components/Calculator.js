@@ -1,28 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
+import calculate from '../logic/calculate';
 
 function Calculator() {
-  return (
-    <CalculatorUi />
+  const [object, setObject] = useState(
+    {
+      total: 0,
+      next: '',
+      operation: '',
+    },
   );
-}
 
-const CalculatorUi = () => {
+  const stateChange = (e) => {
+    setObject(calculate(object, e.target.textContent));
+  };
+
   const digits = ['AC', '+/-', '%', 7, 8, 9, 4, 5, 6, 3, 2, 1, 0, '.'];
 
-  const operators = ['÷', 'X', '-', '+', '='];
+  const operators = ['÷', 'x', '-', '+', '='];
 
   const digitButtons = digits.map((digit) => (
-    <button className="digit-btn" key={digit} type="button">{digit}</button>
+    <button className="digit-btn" key={digit} type="button" onClick={stateChange}>{digit}</button>
   ));
 
   const operatorButtons = operators.map((operator) => (
-    <button className="press-btn amber" key={operator} type="button">{operator}</button>
+    <button className="press-btn amber" key={operator} type="button" onClick={stateChange}>{operator}</button>
   ));
-
   return (
     <div className="calculator">
-      <div>
-        <input placeholder="0" className="result" />
+      <div className="result">
+        <span>
+          {object.total}
+          {object.operation}
+          {object.next}
+        </span>
       </div>
       <div className="digits">
         {digitButtons.slice(0, 3)}
@@ -42,12 +52,13 @@ const CalculatorUi = () => {
         {operatorButtons.slice(3, 4)}
       </div>
       <div className="operators">
-        <button type="button" className="btn-o">{digits[12]}</button>
-        <button type="button" className="digit-btn">{digits[13]}</button>
+        <button type="button" className="btn-o" onClick={stateChange}>{digits[12]}</button>
+        <button type="button" className="digit-btn" onClick={stateChange}>{digits[13]}</button>
         {operatorButtons.slice(4, 5)}
       </div>
     </div>
+
   );
-};
+}
 
 export default Calculator;
