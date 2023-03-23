@@ -10,7 +10,7 @@ function Calculator() {
     },
   );
 
-  const stateChange = (e) => {
+  const clickedBtn = (e) => {
     setObject(calculate(object, e.target.textContent));
   };
 
@@ -19,11 +19,11 @@ function Calculator() {
   const operators = ['÷', 'x', '-', '+', '='];
 
   const digitButtons = digits.map((digit) => (
-    <button className="digit-btn" key={digit} type="button" onClick={stateChange}>{digit}</button>
+    <button className="digit-btn" key={digit} type="button" onClick={clickedBtn}>{digit}</button>
   ));
 
   const operatorButtons = operators.map((operator) => (
-    <button className="press-btn amber" key={operator} type="button" onClick={stateChange}>{operator}</button>
+    <button className="press-btn amber" key={operator} type="button" onClick={clickedBtn}>{operator}</button>
   ));
   return (
     <div className="calculator">
@@ -52,8 +52,8 @@ function Calculator() {
         {operatorButtons.slice(3, 4)}
       </div>
       <div className="operators">
-        <button type="button" className="btn-o" onClick={stateChange}>{digits[12]}</button>
-        <button type="button" className="digit-btn" onClick={stateChange}>{digits[13]}</button>
+        <button type="button" className="btn-o" onClick={clickedBtn}>{digits[12]}</button>
+        <button type="button" className="digit-btn" onClick={clickedBtn}>{digits[13]}</button>
         {operatorButtons.slice(4, 5)}
       </div>
     </div>
