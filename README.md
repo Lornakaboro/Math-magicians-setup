@@ -62,27 +62,61 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
-- Git installed in desktop
-- Code editor of your choice i.e; Visual Studio Code
-- Browser of your choice i.e; Mozilla Firefox ,google chrome, etc
-- Terminal of your choice i.e; Git Bash
-<!--
-Example command:
+In order to run this project you need to run:
+
 
 ```sh
- gem install rails
+ npm install
 ```
- -->
+
+
 ### Setup
 
 Clone this repository to your desired folder:
-- use the git clone command with this [link](git@github.com:Lornakaboro/Math-magicians-setup.git)
-- cd into Awesome-booksEs6
-- Switch branch using this command `git checkout set-up-project`
-- Run the following commands:  npm install
-  npm run build 
+
+
+```sh
+  cd Math-magicians-setup
+  git clone https://github.com/Lornakaboro/Math-magicians-setup.git
+```
+
+### Install
+
+Install this project with:
+
+
+
+```sh
+  cd Math-magicians-setup
+  node version 16 or higher
+```
+
+
+### Usage
+
+To run the project, execute the following command:
+
+
+```
   npm start
+```
+
+### Testing
+
+To run the project, execute the following command:
+
+```
+  npm run test
+```
+
+### Deployment
+
+You can deploy this project using:
+
+- GitHub Pages
+- Netlify
+- Heroku
+- Cyclic
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- AUTHORS -->
