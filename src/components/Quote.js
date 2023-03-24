@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { FaCircleNotch, FaQuoteLeft } from 'react-icons/fa';
 
-function Quotes() {
-  const [data, setData] = useState([]);
+function QuoteGenerator() {
+  const [quoteData, setQuoteData] = useState([]);
   const [hasError, setHasError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const apiKey = '3s3I81LpJxpp0MD46Yqweg==utIo6B2WhXAtvPcj';
+  const API_KEY = '3s3I81LpJxpp0MD46Yqweg==utIo6B2WhXAtvPcj';
   const category = 'happiness';
 
   useEffect(() => {
@@ -16,24 +16,24 @@ function Quotes() {
         const res = await fetch(`https://api.api-ninjas.com/v1/quotes?category=${category}`, {
           method: 'GET',
           headers: {
-            'X-Api-Key': apiKey,
+            'X-Api-Key': API_KEY,
             'Content-Type': 'application/json',
           },
         });
         const json = await res.json();
-        setData(json);
+        setQuoteData(json);
       } catch (error) {
         setHasError(true);
       }
       setIsLoading(false);
     };
     fetchQuote();
-  }, [setData, setIsLoading]);
+  }, [setQuoteData, setIsLoading]);
 
   if (hasError) {
     return (
       <div>
-        <p className="error">Something went wrong!</p>
+        <p className="error">There has been an error!</p>
       </div>
     );
   }
@@ -48,14 +48,14 @@ function Quotes() {
   return (
     <section>
       <div id="quote-box">
-        {data.map((item) => (
-          <blockquote key={data.indexOf(item)} className="blockquote">
-            <p className="quote">
+        {quoteData.map((quote) => (
+          <blockquote key={quoteData.indexOf(quote)} className="quote-block">
+            <p className="quote-text">
               <FaQuoteLeft size={42} />
-              <span id="text">{item.quote}</span>
+              <span id="text" className="text">{quote.quote}</span>
             </p>
-            <footer className="blockquote-footer" id="author">
-              {item.author}
+            <footer className="quote-author" id="author">
+              {quote.author}
             </footer>
           </blockquote>
         ))}
@@ -64,4 +64,4 @@ function Quotes() {
   );
 }
 
-export default Quotes;
+export default QuoteGenerator;
