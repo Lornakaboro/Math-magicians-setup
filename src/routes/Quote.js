@@ -1,5 +1,4 @@
 import React from 'react';
-// import QuoteGenerator from '../components/Quote';
 
 export default function Quote() {
   return (
