@@ -6,15 +6,20 @@
 
 .calculator-container {
   display: flex;
-  padding: 0 4%;
-  gap: 10%;
+  gap: 20%;
+  padding: 2% 4%;
 }
 
 .calculator {
   display: flex;
   flex-direction: column;
   text-align: center;
+  width: 40%;
+}
+
+.calc-text {
   width: 50%;
+  padding-left: 10%;
 }
 
 .result {
@@ -137,6 +142,10 @@ span {
 .navLinks li {
   list-style-type: none;
   border-right: 1px solid black;
+}
+
+.nav-links li:last-child {
+  border-right: none;
 }
 
 .navLinks a {
