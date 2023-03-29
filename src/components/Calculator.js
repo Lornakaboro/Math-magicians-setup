@@ -27,7 +27,7 @@ function Calculator() {
   ));
   return (
     <div className="calculator-container">
-      <h2>Let&#39;s do some Math! </h2>
+      <h2 className="calc-text">Let&#39;s do some Math! </h2>
       <div className="calculator">
         <div className="result">
           <span>
