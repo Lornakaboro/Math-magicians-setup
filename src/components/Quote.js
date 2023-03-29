@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { FaCircleNotch, FaQuoteLeft } from 'react-icons/fa';
+import { FaQuoteLeft } from 'react-icons/fa';
+import { RiLoader4Line } from 'react-icons/ri';
 
 function QuoteGenerator() {
   const [quoteData, setQuoteData] = useState([]);
@@ -40,7 +41,7 @@ function QuoteGenerator() {
   if (isLoading) {
     return (
       <div>
-        <div className="spinner"><FaCircleNotch size={70} /></div>
+        <div className="spinner"><RiLoader4Line size={70} /></div>
       </div>
     );
   }

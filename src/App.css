@@ -1,6 +1,13 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: "lato", sans-serif;
+}
+
+.calculator-container {
+  display: flex;
+  gap: 20%;
+  padding: 2% 4%;
 }
 
 .calculator {
@@ -8,7 +15,11 @@
   flex-direction: column;
   text-align: center;
   width: 40%;
-  margin: 10% auto;
+}
+
+.calc-text {
+  width: 50%;
+  padding-left: 10%;
 }
 
 .result {
@@ -71,7 +82,7 @@ span {
 }
 
 #quote-box {
-  margin: 0 auto;
+  margin: 5% 30%;
   width: 600px;
   background-color: white;
   border-radius: 5px;
@@ -92,7 +103,7 @@ span {
 }
 
 .spinner {
-  animation: spin 0.7s linear infinite;
+  animation: spin 1s linear infinite;
 }
 
 .error {
@@ -103,6 +114,66 @@ span {
 }
 
 @keyframes spin {
-  from { transform: rotate(0); }
-  to { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 3%;
+}
+
+.navLinks {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 1.2rem;
+}
+
+.navLinks li {
+  list-style-type: none;
+  border-right: 1px solid black;
+}
+
+.nav-links li:last-child {
+  border-right: none;
+}
+
+.navLinks a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.home {
+  padding: 0 5%;
+}
+
+.home h2 {
+  margin-bottom: 2%;
+}
+
+.description {
+  margin-bottom: 2%;
+}
+
+.Quote-description {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 4% 0;
 }
